@@ -21,8 +21,8 @@ app.use(express.json()); //Soporte para formatos Json
 app.use(express.urlencoded({ extended: false })); // Para soporte de datos que vienen desde formularios (posiblemente html)
 
 // Rutas
-app.use(require('./routes/index'));
-app.use('/api/peliculas', require('./routes/peliculas'));
+app.use(require('./routes/index')); // Archivo que contiene las rutas principales
+app.use('/api/peliculas', require('./routes/peliculas')); // Archivo que contiene las demás rutas, específicamos que debe comenzar con /api/
 
 // Ejecutamos nuestra aplicación (servidor), específicamos el puerto
 app.listen(3000, () => {
