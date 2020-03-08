@@ -23,8 +23,9 @@ app.use(express.urlencoded({ extended: false })); // Para soporte de datos que v
 
 // routes / rutas
 app.get('/', (req, res) => {
-    console.log("Hola Mundo");
+    //res.send("Hola Mundo");
 
+    res.json({ "Title": "Hola Mundo desde Json." }); // Mandamos un objeto con formato json
 });
 // Ejecutamos nuestra aplicación (servidor), específicamos el puerto
 app.listen(3000, () => {
