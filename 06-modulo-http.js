@@ -16,6 +16,9 @@ const http = require('http');
     el puerto 3000
 */
 http.createServer(function(req, res) {
+    // Indicamos que crearemos una cabecera usando código http
+    res.writeHead(200, { 'Content-type': 'text/html' });
+
     // A una petición responderemos con un mensaje mediante el método Write
     res.write('<h1>HOLA MUNDO DESDE NODE JS</h1>');
     // Detenemos la respuesta, para que el servidor quede disponible para otra solicitud
