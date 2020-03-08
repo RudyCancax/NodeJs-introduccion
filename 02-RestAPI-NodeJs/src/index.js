@@ -5,7 +5,7 @@ const app = express();
 
 const morgan = require('morgan'); // Es un middleware, es una funció que procesa datos antes que el servidor lo reciba
 
-// middlewares de morgan que permiten ver por consola lo que va llegando/peticiones al servidor.
+// middlewares de morgan que permiten ver por consola lo que va llegando/peticiones al servidor.  
 app.use(morgan('dev'));
 
 
