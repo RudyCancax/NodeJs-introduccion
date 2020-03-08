@@ -12,6 +12,7 @@ const colors = require('colors');
 
 // Settings
 app.set('port', process.env.PORT || 3000); // Si existe un puerto definido, que lo use, de lo contrario usara el 3000
+app.set('json spaces', 2);
 
 
 // middlewares de morgan que permiten ver por consola lo que va llegando/peticiones al servidor.  
