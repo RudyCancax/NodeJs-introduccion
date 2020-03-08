@@ -1,10 +1,7 @@
-const operaciones = require("./operaciones.js");
+// Haremos uso del módulo colors que instalamos
 
+// Importamos el módulo colors
+const colors = require('colors');
 
-console.log(operaciones.resta(3, 4));
-
-console.log(operaciones.multip(3, 4));
-
-console.log(operaciones.div(3, 4));
-
-console.log(operaciones.div(3, 0));
+// Aplicamos una de los métodos del módulo colors
+console.log("Hola mundo FELIZ".rainbow);
