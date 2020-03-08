@@ -12,7 +12,7 @@ const colors = require('colors');
 
 // Settings
 app.set('port', process.env.PORT || 3000); // Si existe un puerto definido, que lo use, de lo contrario usara el 3000
-app.set('json spaces', 2);
+app.set('json spaces', 2); //Espaciado del objeto que se envía respecto del borde izquierdo
 
 
 // middlewares de morgan que permiten ver por consola lo que va llegando/peticiones al servidor.  
@@ -20,14 +20,10 @@ app.use(morgan('dev'));
 app.use(express.json()); //Soporte para formatos Json
 app.use(express.urlencoded({ extended: false })); // Para soporte de datos que vienen desde formularios (posiblemente html)
 
+// Rutas
+app.use(require('./routes/index'));
+app.use('/api/peliculas', require('./routes/peliculas'));
 
-
-// routes / rutas
-app.get('/', (req, res) => {
-    //res.send("Hola Mundo");
-
-    res.json({ "Title": "Hola Mundo desde Json." }); // Mandamos un objeto con formato json
-});
 // Ejecutamos nuestra aplicación (servidor), específicamos el puerto
 app.listen(3000, () => {
     console.log('Servidor ejecutandose en puerto: '.yellow,
