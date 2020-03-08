@@ -1,6 +1,7 @@
 // En este ejercicio usaremos http, con el cual podremos
 // crear un servidor Web
 const http = require('http');
+const colors = require('colors');
 
 /*
   Usaremos http.createServer(), el cual tomará algo de tiempo, en el le 
@@ -25,3 +26,5 @@ http.createServer(function(req, res) {
     res.end();
 
 }).listen(3000);
+
+console.log("Servidor en ejecución: ".yellow, "http://localhost:3000".green);
