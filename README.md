@@ -9,4 +9,7 @@ Estos ejercicios únicamente se realizaron con el fin de aprendizaje e introducc
 
 
 
-La carpeta contendrá todos nuestros archivos.
+src: carpeta que contendrá todos nuestros archivos.
+
+Avance: Min: 47
+Tu primer REST API usanddo Node.js, ¿Que es una REST API?
